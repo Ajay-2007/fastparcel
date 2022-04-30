@@ -37,9 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'core',
+
     'bootstrap4',
     'social_django',
+    'core.apps.CoreConfig',
 ]
 
 MIDDLEWARE = [
@@ -139,3 +140,11 @@ SOCIAL_AUTH_FACEBOOK_SCOPE = ["email"]
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
     'fields': 'id, name, email'
 }
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'd33ps3curity@gmail.com'
+EMAIL_HOST_PASSWORD = 'AjayRaikarAjayRaikar@@@@@20071997'
+DEFAULT_FROM_EMAIL = 'Fast Parcel <no-reply@fastparcel.localhost>'
